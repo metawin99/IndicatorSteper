@@ -25,6 +25,8 @@ public class StepView: UIView {
     @IBInspectable public var highlightColor: UIColor = .blue { didSet { setNeedsDisplay() } }
     @IBInspectable public var normalTextColor: UIColor = .darkGray { didSet { setNeedsDisplay() } }
     @IBInspectable public var highlightTextColor: UIColor = .black { didSet { setNeedsDisplay() } }
+    @IBInspectable public var normaltitleTextColor: UIColor = .black { didSet { setNeedsDisplay() } }
+    @IBInspectable public var highlighttitleTextColor: UIColor = .black { didSet { setNeedsDisplay() } }
     @IBInspectable public var fontSize: CGFloat = 14.0 { didSet { setNeedsDisplay() } }
     
     // MARK: - Drawing
@@ -99,7 +101,7 @@ public class StepView: UIView {
             let text2 = "Text"
             let size2 = text2.size(inFont: textFont)
             let rect2 = CGRect(x: point.x - size2.width / 2, y: (point.y - size2.height / 2) + 40, width: size2.width, height: size2.height)
-            drawText(text2, inRect: rect2, withFont: textFont, withColor: UIColor.red, alignment: .center)
+            drawText(text2, inRect: rect2, withFont: textFont, withColor: highlighttitleTextColor, alignment: .center)
         }
         
         for i in currentStep ..< numberOfSteps {
@@ -108,6 +110,11 @@ public class StepView: UIView {
             let size = text.size(inFont: textFont)
             let rect = CGRect(x: point.x - size.width / 2, y: point.y - size.height / 2, width: size.width, height: size.height)
             drawText(text, inRect: rect, withFont: textFont, withColor: normalTextColor, alignment: .center)
+            
+            let text2 = "Text"
+            let size2 = text2.size(inFont: textFont)
+            let rect2 = CGRect(x: point.x - size2.width / 2, y: (point.y - size2.height / 2) + 40, width: size2.width, height: size2.height)
+            drawText(text2, inRect: rect2, withFont: textFont, withColor: normaltitleTextColor, alignment: .center)
         }
     }
     
