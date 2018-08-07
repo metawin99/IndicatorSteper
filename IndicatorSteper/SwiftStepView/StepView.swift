@@ -29,7 +29,7 @@ public class StepView: UIView {
     
     // MARK: - Drawing
     private var pointRaidus: CGFloat { return pointDiameter / 2 }
-    private var pointDiameter: CGFloat { return bounds.size.height }
+    private var pointDiameter: CGFloat { return bounds.size.height - 50 }
     private var halfOfHeight: CGFloat { return bounds.size.height / 2 }
     
     private var lineLength: CGFloat {
@@ -95,6 +95,11 @@ public class StepView: UIView {
             let size = text.size(inFont: textFont)
             let rect = CGRect(x: point.x - size.width / 2, y: point.y - size.height / 2, width: size.width, height: size.height)
             drawText(text, inRect: rect, withFont: textFont, withColor: highlightTextColor, alignment: .center)
+            
+            let text2 = "Text"
+            let size2 = text2.size(inFont: textFont)
+            let rect2 = CGRect(x: point.x - size2.width / 2, y: (point.y - size2.height / 2) + 40, width: size2.width, height: size2.height)
+            drawText(text2, inRect: rect2, withFont: textFont, withColor: UIColor.red, alignment: .center)
         }
         
         for i in currentStep ..< numberOfSteps {

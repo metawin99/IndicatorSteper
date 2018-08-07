@@ -28,11 +28,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Az-Px-t4r" customClass="StepView" customModule="IndicatorSteper" customModuleProvider="target">
-                                        <rect key="frame" x="127.5" y="40" width="120" height="40"/>
+                                        <rect key="frame" x="112.5" y="10" width="150" height="100"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="dNc-qt-sBQ"/>
-                                            <constraint firstAttribute="height" constant="40" id="qb2-Cr-rTJ"/>
+                                            <constraint firstAttribute="width" constant="150" id="dNc-qt-sBQ"/>
+                                            <constraint firstAttribute="height" constant="100" id="qb2-Cr-rTJ"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
