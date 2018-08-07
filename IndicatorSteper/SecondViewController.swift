@@ -8,11 +8,22 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+protocol SecondViewControllerDelagate {
+    func secondViewControllerBackButtonTapped()
+}
 
+class SecondViewController: UIViewController, PageIndexViewControllerDelegate {
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var pageIndex:Int!
+    var delegate:SecondViewControllerDelagate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        scrollView.isScrollEnabled = false
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +32,16 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getPageIndex() -> Int! {
+        return pageIndex
     }
-    */
+    
+    func setPageIndex(index: Int!) {
+        pageIndex = index
+    }
 
+    @IBAction func backButtonTapped(_ sender: Any) {
+        delegate?.secondViewControllerBackButtonTapped()
+    }
+    
 }

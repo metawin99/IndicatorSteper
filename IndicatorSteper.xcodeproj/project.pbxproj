@@ -14,6 +14,9 @@
 		66212B2421185A28001B4225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66212B2221185A28001B4225 /* LaunchScreen.storyboard */; };
 		66212B2F21185A28001B4225 /* IndicatorSteperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66212B2E21185A28001B4225 /* IndicatorSteperTests.swift */; };
 		66212B3A21185A28001B4225 /* IndicatorSteperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66212B3921185A28001B4225 /* IndicatorSteperUITests.swift */; };
+		665707BD21194821004C480E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665707BC21194821004C480E /* FirstViewController.swift */; };
+		665707BF2119482A004C480E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665707BE2119482A004C480E /* SecondViewController.swift */; };
+		665707C221195420004C480E /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665707C121195420004C480E /* StepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		66212B3521185A28001B4225 /* IndicatorSteperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndicatorSteperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66212B3921185A28001B4225 /* IndicatorSteperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorSteperUITests.swift; sourceTree = "<group>"; };
 		66212B3B21185A28001B4225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		665707BC21194821004C480E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		665707BE2119482A004C480E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		665707C121195420004C480E /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		66212B1821185A26001B4225 /* IndicatorSteper */ = {
 			isa = PBXGroup;
 			children = (
+				665707C021195409004C480E /* SwiftStepView */,
 				66212B1921185A26001B4225 /* AppDelegate.swift */,
 				66212B1B21185A26001B4225 /* ViewController.swift */,
 				66212B1D21185A26001B4225 /* Main.storyboard */,
 				66212B2021185A28001B4225 /* Assets.xcassets */,
 				66212B2221185A28001B4225 /* LaunchScreen.storyboard */,
 				66212B2521185A28001B4225 /* Info.plist */,
+				665707BC21194821004C480E /* FirstViewController.swift */,
+				665707BE2119482A004C480E /* SecondViewController.swift */,
 			);
 			path = IndicatorSteper;
 			sourceTree = "<group>";
@@ -123,6 +132,14 @@
 				66212B3B21185A28001B4225 /* Info.plist */,
 			);
 			path = IndicatorSteperUITests;
+			sourceTree = "<group>";
+		};
+		665707C021195409004C480E /* SwiftStepView */ = {
+			isa = PBXGroup;
+			children = (
+				665707C121195420004C480E /* StepView.swift */,
+			);
+			path = SwiftStepView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665707BF2119482A004C480E /* SecondViewController.swift in Sources */,
+				665707BD21194821004C480E /* FirstViewController.swift in Sources */,
 				66212B1C21185A26001B4225 /* ViewController.swift in Sources */,
+				665707C221195420004C480E /* StepView.swift in Sources */,
 				66212B1A21185A26001B4225 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
